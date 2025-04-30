@@ -37,7 +37,7 @@ const Home = () => {
       
     }else{
       screenScale= [3,3,3];
-      screenPosition=[0,-4,-4];
+      screenPosition=[0,-10,-4];
      
     }
     return [screenScale, screenPosition];
@@ -47,7 +47,7 @@ const Home = () => {
   const [planeScale, planePosition] = adjustIslandForScreenSize();
   return (
     <section className="w-full h-screen relative">
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+      <div className='absolute top-18 left-0 right-0 z-10 flex items-center justify-center'>
       {CurrentStage && <HomeInfo CurrentStage={CurrentStage} />}
 </div>
 
