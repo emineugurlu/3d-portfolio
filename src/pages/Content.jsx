@@ -12,6 +12,26 @@ const Content = () => {
   const hadleFocus = (e) => {
     e.preventDefault();
     setisLoading(true);
+
+    emailjs.form(
+     import.meta.env.VITE_APP_EMAILJS_ID,
+     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+     {
+      form_name: form.name,
+      to_name:"Emine",
+      form_email:form.mail,
+      to_email:'ugurlu34emine@gmail.com',
+      message:form.message
+     },
+     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY 
+    ).then(() =>{
+        setisLoading(false);
+
+    }).catch((error) =>{
+       setisLoading(false);
+       console.log(error);
+    }
+    )
   };
   const handleBlur = () => {};
   const handleSubmit = () => {}
