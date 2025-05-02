@@ -10,7 +10,7 @@ const Content = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
-
+  const [currentAnimation, setcurrentAnimation] = useState('idle')
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -18,6 +18,7 @@ const Content = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setcurrentAnimation('run');
 
     emailjs
       .send(
@@ -38,10 +39,13 @@ const Content = () => {
       })
       .catch((error) => {
         setIsLoading(false);
+        setcurrentAnimation('idle')
         console.error("EmailJS Error:", error);
       });
   };
 
+  const hadleSubmit = (e) => setcurrentAnimation('walk');
+  const handleBlur = () => setcurrentAnimation('idle');
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
       {/* Contact Form */}
@@ -109,9 +113,10 @@ const Content = () => {
           }}
         >
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
-          <ambientLight intensity = {1}/>
+          <ambientLight intensity = {0.5}/>
           <Suspense fallback={<Loader />}>
             <Fox
+              currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
               rotation={[12.6, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
