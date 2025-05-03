@@ -8,16 +8,17 @@ const Content = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState("Idle");
+  const [currentAnimation, setCurrentAnimation] = useState("idle"); // 🟢 doğru isim
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setCurrentAnimation("walk"); // 🟢 yazarken
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setCurrentAnimation("hit");
+    setCurrentAnimation("hit"); // 🟢 gönderince
 
     emailjs
       .send(
@@ -34,24 +35,22 @@ const Content = () => {
       )
       .then(() => {
         setIsLoading(false);
-
         setTimeout(() => {
-          setCurrentAnimation("Idle");
+          setCurrentAnimation("idle"); // 🟢 geri dön
           setForm({ name: "", email: "", message: "" });
         }, 3000);
       })
       .catch((error) => {
         setIsLoading(false);
-        setCurrentAnimation("Idle");
+        setCurrentAnimation("walk.left"); // 🟢 hata animasyonu
         console.error("EmailJS Error:", error);
       });
   };
 
-  const handleBlur = () => setCurrentAnimation("Idle");
+  const handleBlur = () => setCurrentAnimation("idle");
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
-      {/* Contact Form */}
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
@@ -108,16 +107,8 @@ const Content = () => {
         </form>
       </div>
 
-      {/* 3D Fox Model */}
       <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
-        <Canvas
-          camera={{
-            position: [0, 0, 5],
-            fov: 75,
-            near: 0.1,
-            far: 1000,
-          }}
-        >
+        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
           <ambientLight intensity={0.5} />
           <Suspense fallback={<Loader />}>
