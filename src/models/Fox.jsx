@@ -11,14 +11,19 @@ const Fox = ({ currentAnimation = "Idle", ...props }) => {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
+    // Animasyonları konsola yazdırarak hangi animasyonların olduğunu kontrol et
+    console.log(animations);
+
     // Mevcut tüm animasyonları durdur
     Object.values(actions).forEach((action) => action.stop());
 
-    // Belirtilen animasyonu oynat
+    // Animasyon mevcutsa, onu başlat
     if (actions[currentAnimation]) {
       actions[currentAnimation].reset().fadeIn(0.5).play();
+    } else {
+      console.warn(`Animasyon "${currentAnimation}" mevcut değil!`);
     }
-  }, [actions, currentAnimation]);
+  }, [actions, currentAnimation, animations]);
 
   return (
     <group ref={group} {...props} dispose={null}>

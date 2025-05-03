@@ -8,7 +8,7 @@ const Content = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState("idle");
+  const [currentAnimation, setCurrentAnimation] = useState("Idle");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -36,18 +36,18 @@ const Content = () => {
         setIsLoading(false);
 
         setTimeout(() => {
-          setCurrentAnimation("idle");
+          setCurrentAnimation("Idle");
           setForm({ name: "", email: "", message: "" });
         }, 3000);
       })
       .catch((error) => {
         setIsLoading(false);
-        setCurrentAnimation("idle");
+        setCurrentAnimation("Idle");
         console.error("EmailJS Error:", error);
       });
   };
 
-  const handleBlur = () => setCurrentAnimation("idle");
+  const handleBlur = () => setCurrentAnimation("Idle");
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
