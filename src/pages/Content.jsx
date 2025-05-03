@@ -1,16 +1,15 @@
 import React, { useState, useRef, Suspense } from "react";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
-import Fox from '../models/Fox';
-import Loader from '../components/Loader'; // ✔️ default export'a uygun
-import { AmbientLight } from "three";
-
+import Fox from "../models/Fox";
+import Loader from "../components/Loader";
 
 const Content = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
-  const [currentAnimation, setcurrentAnimation] = useState('idle')
+  const [currentAnimation, setCurrentAnimation] = useState("idle");
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -18,7 +17,7 @@ const Content = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setcurrentAnimation('run');
+    setCurrentAnimation("hit");
 
     emailjs
       .send(
@@ -35,17 +34,21 @@ const Content = () => {
       )
       .then(() => {
         setIsLoading(false);
-        setForm({ name: "", email: "", message: "" });
+
+        setTimeout(() => {
+          setCurrentAnimation("idle");
+          setForm({ name: "", email: "", message: "" });
+        }, 3000);
       })
       .catch((error) => {
         setIsLoading(false);
-        setcurrentAnimation('idle')
+        setCurrentAnimation("idle");
         console.error("EmailJS Error:", error);
       });
   };
 
-  const hadleSubmit = (e) => setcurrentAnimation('walk');
-  const handleBlur = () => setcurrentAnimation('idle');
+  const handleBlur = () => setCurrentAnimation("idle");
+
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
       {/* Contact Form */}
@@ -67,6 +70,7 @@ const Content = () => {
               required
               value={form.name}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
           </label>
 
@@ -80,6 +84,7 @@ const Content = () => {
               required
               value={form.email}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
           </label>
 
@@ -93,6 +98,7 @@ const Content = () => {
               required
               value={form.message}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
           </label>
 
@@ -113,7 +119,7 @@ const Content = () => {
           }}
         >
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
-          <ambientLight intensity = {0.5}/>
+          <ambientLight intensity={0.5} />
           <Suspense fallback={<Loader />}>
             <Fox
               currentAnimation={currentAnimation}
