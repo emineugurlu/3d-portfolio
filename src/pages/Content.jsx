@@ -13,7 +13,7 @@ const Content = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
 
-  const { alert, showAlert, hideAlert } = useAlert();
+  const { alert, showAlert } = useAlert();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -41,11 +41,8 @@ const Content = () => {
       .then(() => {
         showAlert({ text: "Message sent successfully!", type: "success" });
         setIsLoading(false);
-        setTimeout(() => {
-          hideAlert();
-          setCurrentAnimation("idle");
-          setForm({ name: "", email: "", message: "" });
-        }, 3000);
+        setCurrentAnimation("idle");
+        setForm({ name: "", email: "", message: "" });
       })
       .catch((error) => {
         console.error("EmailJS Error:", error);
@@ -60,7 +57,6 @@ const Content = () => {
   return (
     <section className="relative flex lg:flex-row flex-col max-container min-h-screen">
       {alert.show && <Alert {...alert} />}
-      
 
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>

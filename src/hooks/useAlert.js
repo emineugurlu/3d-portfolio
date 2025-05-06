@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const useAlert = () => {
-  const [alert, setAlert] = useState({ show: false, text: '', type: 'danger' });
+  const [alert, setAlert] = useState({ show: false, text: "", type: "" });
 
-  const showAlert = ({ text, type = 'danger' }) =>
+  const showAlert = ({ text, type }) => {
     setAlert({ show: true, text, type });
 
-  const hideAlert = () =>
-    setAlert({ show: false, text: '', type: 'danger' });
+    // Otomatik gizle
+    setTimeout(() => {
+      setAlert({ show: false, text: "", type: "" });
+    }, 3000);
+  };
+
+  const hideAlert = () => {
+    setAlert({ show: false, text: "", type: "" });
+  };
 
   return { alert, showAlert, hideAlert };
 };
