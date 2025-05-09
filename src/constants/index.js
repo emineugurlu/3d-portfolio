@@ -27,86 +27,22 @@ import {
 } from "../assets/icons";
 
 export const skills = [
-    {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    }
+    { imageUrl: css, name: "CSS", type: "Frontend" },
+    { imageUrl: express, name: "Express", type: "Backend" },
+    { imageUrl: git, name: "Git", type: "Version Control" },
+    { imageUrl: github, name: "GitHub", type: "Version Control" },
+    { imageUrl: html, name: "HTML", type: "Frontend" },
+    { imageUrl: javascript, name: "JavaScript", type: "Frontend" },
+    { imageUrl: mongodb, name: "MongoDB", type: "Database" },
+    { imageUrl: motion, name: "Motion", type: "Animation" },
+    { imageUrl: mui, name: "Material-UI", type: "Frontend" },
+    { imageUrl: nextjs, name: "Next.js", type: "Frontend" },
+    { imageUrl: nodejs, name: "Node.js", type: "Backend" },
+    { imageUrl: react, name: "React", type: "Frontend" },
+    { imageUrl: redux, name: "Redux", type: "State Management" },
+    { imageUrl: sass, name: "Sass", type: "Frontend" },
+    { imageUrl: tailwindcss, name: "Tailwind CSS", type: "Frontend" },
+    { imageUrl: typescript, name: "TypeScript", type: "Frontend" },
 ];
 
 export const experiences = [
@@ -130,9 +66,9 @@ export const experiences = [
         iconBg: "#fbc3bc",
         date: "Jan 2021 - Feb 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Developing and maintaining mobile applications using React Native and related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Implementing responsive design and ensuring cross-platform compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
@@ -143,23 +79,23 @@ export const experiences = [
         iconBg: "#b7e4c7",
         date: "Jan 2022 - Jan 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developing and maintaining web applications using modern frontend frameworks.",
+            "Working closely with product and design teams to deliver polished user interfaces.",
+            "Optimizing application performance and SEO.",
+            "Conducting code reviews and mentoring junior developers.",
         ],
     },
     {
-        title: "Full stack Developer",
+        title: "Full Stack Developer",
         company_name: "Meta",
         icon: meta,
         iconBg: "#a2d2ff",
         date: "Jan 2023 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Building scalable full-stack applications using MERN stack.",
+            "Leading frontend architecture decisions and backend API development.",
+            "Integrating third-party APIs and services.",
+            "Maintaining code quality and adhering to industry best practices.",
         ],
     },
 ];
