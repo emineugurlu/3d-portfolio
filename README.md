@@ -57,7 +57,6 @@ Frontend Developer | Computer Engineering Student
 ## Thank You 🙏✨
 A special thanks to Adrian Hajdin for his amazing tutorials and guidance throughout the development of this project. His content has been a major inspiration! 💡
 
-Check out his work on GitHub and YouTube to learn more! 🚀
-
+Check out his work on GitHub (https://github.com/adrianhajdin) and YouTube (https://www.youtube.com/@javascriptmastery) to learn more! 🚀
 
 ---
