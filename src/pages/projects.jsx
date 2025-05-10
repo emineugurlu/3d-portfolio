@@ -1,4 +1,5 @@
 import React from "react";
+import { projects } from "../constants";
 
 const Projects = () => {
   return (
@@ -20,6 +21,22 @@ const Projects = () => {
           represents a step forward in my growth and dedication to frontend
           development. Let's explore what I've been working on!
         </p>
+      </div>
+
+      <div className="flex flex-wrap my-20 gap-16">
+        {projects.map((project, index) => (
+          <div className="lg:w-[400px] w-full">
+            <div className={`btn-back rounded-xl ${project.theme}`}>
+              <div>
+                <img
+                  src={project.iconUrl}
+                  alt={project.name || "Project Icon"}
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
