@@ -2,7 +2,7 @@
 
 > **"A cutting-edge 3D experiential portfolio built with React-Three-Fiber, featuring complex GLTF orchestration, real-time lighting physics, and spatial audio integration."**
 
-![Repo Size](https://img.shields.io/github/repo-size/emineugurlu/3D-Portfolio-Website?color=blue&style=flat-square)
+![Repo Size](https://img.shields.io/github/repo-size/emineugurlu/3d-portfolio?color=blue&style=flat-square)
 ![Framework](https://img.shields.io/badge/Framework-React--Three--Fiber-black?style=flat-square&logo=react)
 ![Styling](https://img.shields.io/badge/Styling-Tailwind--CSS-38b2ac?style=flat-square&logo=tailwind-css)
 
