@@ -1,62 +1,59 @@
-# 🌐 3D Portfolio Website
+# 🏝️ Atmosphere3D: Immersive React-Fiber Ecosystem
 
-A visually engaging and interactive 3D portfolio website built with **React**, **Three.js** (via `@react-three/fiber`), and modern web technologies. This project showcases my frontend development skills in building immersive web experiences.
+> **"A cutting-edge 3D experiential portfolio built with React-Three-Fiber, featuring complex GLTF orchestration, real-time lighting physics, and spatial audio integration."**
 
-## 🛠️ Technologies Used
+![Repo Size](https://img.shields.io/github/repo-size/emineugurlu/3D-Portfolio-Website?color=blue&style=flat-square)
+![Framework](https://img.shields.io/badge/Framework-React--Three--Fiber-black?style=flat-square&logo=react)
+![Styling](https://img.shields.io/badge/Styling-Tailwind--CSS-38b2ac?style=flat-square&logo=tailwind-css)
 
-- **React.js**
-- **Three.js** with `@react-three/fiber` and `@react-three/drei`
-- **Tailwind CSS**
-- **React Router**
-- **Responsive Design**
-- **GLTF 3D Models**
-- **Custom Animations**
-- **Audio Integration**
-
-## 🎯 Features
-
-- 3D animated environment with an interactive island and plane.
-- Smooth transitions and animations across different stages.
-- Embedded background music with toggle option.
-- Responsive layout that adapts to mobile and desktop screens.
-- Project showcase with custom icons and themes.
-- Reusable components and clean architecture.
-
-## 📁 Folder Structure
-
-├── public/
-│ └── assets/
-├── src/
-│ ├── assets/
-│ ├── components/
-│ ├── constants/
-│ ├── models/
-│ ├── pages/
-│ └── App.jsx
-
-## 📸 Screenshots
-![image](https://github.com/user-attachments/assets/92e6ea40-d4d1-4d3c-86d1-2b20a2e83d5d)
-![image](https://github.com/user-attachments/assets/0dca4516-a06b-44ca-ad86-5a5aee6b8255)
-![image](https://github.com/user-attachments/assets/4e89b2c9-b53c-4353-8d46-27c1cd00bbb2)
-![image](https://github.com/user-attachments/assets/aa306c6c-ab3a-4861-9f28-44cac6f74d51)
-![image](https://github.com/user-attachments/assets/f1fc5329-da2f-42c4-b034-b6ce904e2e97)
-![image](https://github.com/user-attachments/assets/ca31985c-bf97-4b4c-8414-c9b2ee644ec5)
-
-## 🧠 Learning Outcomes
-
-- Deepened my understanding of **React + Three.js integration**.
-- Gained hands-on experience with **3D models**, **lighting**, and **animation loops**.
-- Practiced organizing a large-scale front-end project using reusable components.
-
-## 👩‍💻 Author
-
-**Emine Uğurlu**  
-Frontend Developer | Computer Engineering Student  
-[LinkedIn] (https://www.linkedin.com/in/emine-ugurlu/) | [GitHub] (https://github.com/emineugurlu)
-
-## Thank You 🙏✨
-A special thanks to Adrian Hajdin for his amazing tutorials and guidance throughout the development of this project. His content has been a major inspiration! 💡
-
-Check out his work on GitHub (https://github.com/adrianhajdin) and YouTube (https://www.youtube.com/@javascriptmastery) to learn more! 🚀
+Beyond standard web interfaces, this project explores the **Convergence of WebGL and Declarative UI**. Utilizing `@react-three/fiber`, I implemented an interactive 3D island environment where every element—from the soaring plane to the atmospheric lighting—is managed within a stateful React lifecycle. This project represents a deep dive into **3D Scene Graph Optimization** and immersive storytelling.
 
 ---
+
+## 🚀 Engineering Mindset
+
+This application serves as a benchmark for **High-Fidelity Web Graphics**:
+
+*   **Declarative 3D Orchestration:** Using `@react-three/fiber` and `@react-three/drei` to manage complex 3D meshes (GLTF) as reusable React components.
+*   **Spatial State Management:** Synchronizing 3D transformations with the React component tree to create interactive transitions and scroll-triggered animations.
+*   **Lighting & Physics Implementation:** Utilizing Ambient, Point, and Spot lighting matrices to create realistic depth and shadow mapping across the island geometry.
+*   **Dynamic Audio Integration:** Implementing a togglable spatial audio engine to enhance user immersion without compromising main-thread performance.
+*   **Utility-First Design:** Leveraging Tailwind CSS for the UI overlay to maintain a clean, responsive, and maintainable styling architecture.
+
+## 🌟 Key Features
+
+*   **Interactive 3D Navigation:** A fluid, animated island environment with responsive flight mechanics.
+*   **Immersive Storytelling:** Cinematic transitions and custom animations that guide the user through different project stages.
+*   **Cross-Platform Fidelity:** A fully responsive layout that maintains complex WebGL rendering quality on both mobile and desktop viewports.
+*   **Reusable Model Logic:** Modular 3D components designed for scalability and high-performance rendering loops.
+
+## 🔧 Technical Stack
+
+*   **Core Logic:** React.js, React Router.
+*   **3D Engine:** Three.js, @react-three/fiber, @react-three/drei.
+*   **Styling:** Tailwind CSS.
+*   **Assets:** GLTF/GLB 3D Models, Custom Icons.
+
+## 📸 Visual Showcase
+
+![Atmosphere View 1](https://github.com/user-attachments/assets/92e6ea40-d4d1-4d3c-86d1-2b20a2e83d5d)
+![Atmosphere View 2](https://github.com/user-attachments/assets/0dca4516-a06b-44ca-ad86-5a5aee6b8255)
+![Model View](https://github.com/user-attachments/assets/4e89b2c9-b53c-4353-8d46-27c1cd00bbb2)
+![UI Overlay](https://github.com/user-attachments/assets/aa306c6c-ab3a-4861-9f28-44cac6f74d51)
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/emineugurlu/3D-Portfolio-Website.git](https://github.com/emineugurlu/3D-Portfolio-Website.git)
+
+2. **Install Dependencies:**
+   ````bash
+   npm install
+3. **Launch Project:**
+   ````bash
+   npm run dev
+
+Developed by Emine Uğurlu - Computer Engineer. Special thanks to Adrian Hajdin for the architectural inspiration.
